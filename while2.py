@@ -15,11 +15,23 @@
     
 """
 
+my_dict = {'Как дела?': 'Хорошо', 'Что делаешь?': 'Программирую',
+ 'На каком языке пишешь?': 'Python'}
+
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
-if __name__ == "__main__":
-    ask_user()
+    while True:
+        user_say = input('Как дела?')
+        if user_say == ('Хорошо'):
+            print('Рад за тебя')
+            break
+    while True:
+        user_ask = input('спроси что нибудь')
+
+        if user_ask in my_dict.keys():
+            anything = my_dict.get(user_ask)
+            print(anything)
+            break
+        
+        
+
+ask_user()
